@@ -9,3 +9,6 @@ Proof of concent is shown in the image below. The first image is a path of 305 c
 To get started using the macro, you can download the XLSM file (macro enabled Excel file) from the release page. If you would like to import the macro yourself, you can create a new spreadsheet and record a dummy macro. Then edit the dummy and paste the contexts of the VBS file in this repository into the VBS editor.
 
 After you have the Excel file, copy your list of coordinate pairs into column A of the spreadsheet. Then push Ctrl+a to start the macro. Once it is completed, copy the selected output into your program. Note that it takes about 70 seconds to process 1000 coordinate pairs on a 2 GHz dual core processor.
+
+## Notes
+This has been tested on Windows running Excel 2007 and Mac running Excel 2019.
