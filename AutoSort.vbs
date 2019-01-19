@@ -11,11 +11,14 @@ Dim old As String
 Dim replace As String
 
 'Split the data into two columns
-Columns("A:A").Select
-Selection.TextToColumns Destination:=Range("A1"), DataType:=xlDelimited, _
-    TextQualifier:=xlDoubleQuote, ConsecutiveDelimiter:=False, Tab:=True, _
-    Semicolon:=False, Comma:=True, Space:=False, Other:=False, FieldInfo _
-    :=Array(Array(1, 1), Array(2, 1)), TrailingMinusNumbers:=True
+ActiveWorkbook.ActiveSheet.Columns("A:A").TextToColumns _
+    Destination:=Range("A1"), _
+    DataType:=xlDelimited, _
+    TextQualifier:=xlDoubleQuote, _
+    Tab:=True, _
+    Comma:=True, _
+    FieldInfo:=Array(Array(1, 1), Array(2, 1)), _
+    TrailingMinusNumbers:=True
 
 'Count the rows; set the variables and formula
 cnt = Application.WorksheetFunction.CountA(Range("A:A"))
@@ -28,18 +31,20 @@ Cells(2, 3).Formula = _
 'Auto fill the formula
 Range("C2").Select
 Selection.AutoFill Destination:=Range("C2:C" & cnt)
-Range("C2:C" & cnt).Select
 
 'Loop a sort by distance until all rows are in order from the last coordinate
 'Also sets the distance to 0 so the sort order isnt lost
 Do Until i > cnt
     old = "$" & i
     replace = "$" & i + 1
-    Cells.replace What:=old, Replacement:=replace, LookAt:=xlPart, SearchOrder _
-        :=xlByRows, MatchCase:=False, SearchFormat:=False, ReplaceFormat:=False
+    
     ActiveWorkbook.ActiveSheet.Sort.SortFields.Clear
-    ActiveWorkbook.ActiveSheet.Sort.SortFields.Add Key:=Range("C2"), _
-        SortOn:=xlSortOnValues, Order:=xlAscending, DataOption:=xlSortNormal
+    ActiveWorkbook.ActiveSheet.Sort.SortFields.Add _
+        Key:=Range("C2"), _
+        SortOn:=xlSortOnValues, _
+        Order:=xlAscending, _
+        DataOption:=xlSortNormal
+    
     With ActiveWorkbook.ActiveSheet.Sort
         .SetRange Range("A1:C" & cnt)
         .Header = xlYes
@@ -48,13 +53,19 @@ Do Until i > cnt
         .SortMethod = xlPinYin
         .Apply
     End With
-    Cells(i + 1, 3).Value = 0
     
+    Cells.replace _
+        What:=old, _
+        Replacement:=replace, _
+        LookAt:=xlPart, _
+        SearchOrder:=xlByRows
+    
+    Cells(i + 1, 3).Value = 0
     i = i + 1
 Loop
 
 'Delete the distance column since it isn't needed anymore
-Columns("C:C").Select
+Range("C:C").Select
 Selection.ClearContents
 
 'Make a concatinated cell for each coordinate pair again
