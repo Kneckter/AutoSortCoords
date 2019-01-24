@@ -11,4 +11,8 @@ To get started using the macro, you can download the XLSM file (macro enabled Ex
 After you have the Excel file, copy your list of coordinate pairs into column A of the spreadsheet. Then push Ctrl+a to start the macro. Once it is completed, copy the selected output into your program. Note that it takes about 70 seconds to process 1000 coordinate pairs on a 2 GHz dual core processor.
 
 ## Notes
-This has been tested on Windows running Excel 2007/2010/365 Business and Mac running Excel 2019. It did not work on Windows running Excel 2003 and Mac running Excel 15.35 from 2017.
+This has been tested on Windows running Excel 2007/2010/365 Business and Mac running Excel 2019. 
+
+It did not work on Windows running Excel 2003 and Mac running Excel 15.35 from 2017.
+
+Thanks to http://www.gpsvisualizer.com/, you can upload your coordinates and get images like the ones in this post.
