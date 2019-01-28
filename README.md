@@ -18,7 +18,7 @@ To get started using the macro in Sheets, you can grab a copy of the workbook lo
 
 If you would like to import the macro yourself, you can create a new spreadsheet on your Google drive and record a dummy macro. Then edit the dummy and paste the contexts of the GS file in this repository into the script editor.
 
-After you have the file setup, paste a copy of your coordinate pairs into column A of the spreadsheet. Then push Ctrl+Alt+Shift+0 (because google is lame) to start the macro. Once it is completed, copy the selected output into your program. Note that it takes about 320 seconds to process 1000 coordinate pairs on Google Sheets and that column C will be the same as A&B together.
+After you have the file setup, paste a copy of your coordinate pairs into column A of the spreadsheet. Then push Ctrl+Alt+Shift+0 (because google is lame) to start the macro. Once it is completed, copy the selected output into your program. Note that it takes about 200 seconds to process 1000 coordinate pairs on Google Sheets and that column C will be the same as A&B together.
 
 ## Notes
 This has been tested on Windows running Excel 2007/2010/365 Business and Mac running Excel 2019. 
