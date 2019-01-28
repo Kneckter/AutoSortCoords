@@ -25,9 +25,7 @@ function AutoSortCoords() {
     var values=SpreadsheetApp.getActiveSheet().getRange(1,4,cnt,1).getValues();
 	
     //Set those values to another column so they do not have formulas
-    for (var ii = 0; ii < cnt; ii++) {
-      spreadsheet.getRange('C'+(ii+1)).setValue(values[ii][0]);
-    }
+    SpreadsheetApp.getActiveSheet().getRange(1,3,cnt,1).setValues(values);
     
     //Sort the columns by distances
     spreadsheet.getRange('A:C').sort({column: 3, ascending: true});
