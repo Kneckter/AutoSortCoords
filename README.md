@@ -13,4 +13,5 @@ Once you have the files on your system, create a text file of your coordinates n
 ## Notes
 This has been tested on Ubuntu 18.04 with Python2.7. 
 
+Thanks to https://github.com/dmishin/tsp-solver for the tsp-solver module.
 Thanks to http://www.gpsvisualizer.com/, you can upload your coordinates and get images like the ones in this post.
