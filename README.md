@@ -3,8 +3,8 @@ A python script that will sort coordinates by using the TSP Solver module to mak
 
 Proof of concent is shown in the image below. The first image is a path of 400 coordinates generated from RDM Tools. The second image is a path of the same coordinates using the AutoSortCoords macro. The last image is the path using the same coordinates and the pythong script.
 
-![alt text](https://raw.githubusercontent.com/Kneckterunun/AutoSortCoords/master/Proof.png)
-unun
+![alt text](https://raw.githubusercontent.com/Kneckter/AutoSortCoords/python/Proof.png)
+
 # Get Started With Python
 To get started using the python script, you can download the two files or `git clone` this repository branch. The script requires python's matplotlib for calculating the route.
 
