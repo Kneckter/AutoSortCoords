@@ -1,3 +1,6 @@
+# Archived
+This project is now archived and replaced with the SpawnpointClusterTool located at https://github.com/Kneckter/SpawnpointClusterTool.
+
 # TSP Py
 A python script that will sort coordinates by using the TSP Solver module to make the shortest route through a list of coordinates. I did not write this script but I wanted to show it in this repository since it works better than my VBS macro. I did modified it slightly so it does not need Tkinter. 
 
